@@ -1,0 +1,33 @@
+Algoritmo pseudo11
+	Definir num, contadorimpar, contadornumeros, suma, contadorpar, mayorque Como Entero
+	Definir promedio Como Real
+	Para x<-1 Hasta 10 Con Paso 1 Hacer
+		Escribir "Ingrese un numero de 0 a 36"
+		Leer num
+		Mientras num > 36 o num < 0 Hacer
+			Escribir "Ingrese un numero de 0 a 36"
+			Leer num
+		FinMientras
+		Si num % 2 <> 0 Entonces
+			contadorimpar = contadorimpar + 1
+		FinSi
+		Si num % 2 == 0 y num <> 0 Entonces
+			suma = suma + num
+			contadorpar = contadorpar + 1
+		FinSi
+		Si num >= 13 y num <= 24 Entonces
+			contadornumeros = contadornumeros + 1
+		Fin Si
+		Si num > mayorque Entonces
+			mayorque = num
+		FinSi
+	Fin Para
+	Si contadorpar == 0 Entonces
+		contadorpar = 1
+	FinSi
+	promedio = suma / contadorpar
+	Escribir "El numero de digitos impares es de ", contadorimpar
+	Escribir "El promedio de los digitos pares es de ",promedio
+	Escribir "La cantidad de digitos comprendidos entre 13 y 24 es de ", contadornumeros
+	Escribir "El numero mayor ingresado es ", mayorque
+FinAlgoritmo
